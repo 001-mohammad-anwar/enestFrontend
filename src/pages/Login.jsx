@@ -1,7 +1,3 @@
-// ===============================
-// Login.jsx
-// ===============================
-
 import React, { useState } from "react";
 
 import { Link, Navigate, useNavigate } from "react-router-dom";
@@ -79,7 +75,10 @@ const Login = () => {
     }
 
   } catch (error) {
-
+      if(error.response?.status === 404 ){
+        // toast.error("Please register first");
+        navigate("/signup");
+      }
     console.log(error);
 
     AxiosToastError(error);
