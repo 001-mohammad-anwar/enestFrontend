@@ -9,7 +9,7 @@ import SummaryApi from "../commonApi's/SummaryApi"
  });
 
 
-// REQUEST INTERCEPTOR
+
 Axios.interceptors.request.use(
 
   (config) => {
