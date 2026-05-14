@@ -34,27 +34,31 @@ const SummaryApi = {
     method: "DELETE",
   }),
 
-  createTask: {
-    url: `/api/task/create-task`,
-    method: "POST",
-  },
   searchProjects: {
     url: "/api/project/search-projects",
     method: "GET",
   },
+
+  createTask: {
+    url: `/api/task/create-task`,
+    method: "POST",
+  },
+
+  updateTaskStatus: (taskId) => ({
+    url: `/api/task/updateTaskStatus/${taskId}`,
+    method: "put",
+  }),
+
+    deleteTask: (taskId)=> ({
+    url: `/api/task/deleteTask/${taskId}`,
+    method: "DELETE",
+  }),
+
+getAllTask: (projectId) => ({
+  url: `/api/task/getTask/${projectId}`,
+  method: "get",
+}),
+
 };
 
 export default SummaryApi;
-
-
-
-
-
-
-
-
-
-
-
-
-

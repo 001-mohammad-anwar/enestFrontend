@@ -5,54 +5,76 @@ import {
   Route,
 } from "react-router-dom";
 
-
-// import ProjectDetails from "../pages/ProjectDetails";
-
 import ProtectedRoute from "./ProtectedRoute";
+
 import Dashboard from "../pages/Dashbord";
 import Login from "../pages/Login";
-import ProjectDetails from "../pages/ProjectDetails";
 import Signup from "../pages/Signup";
+
 import AllProjects from "../pages/AllProjects";
+import ProjectDetails from "../pages/ProjectDetails";
+
+import AllTasks from "../pages/AllTasks";
 
 const AppRoutes = () => {
+
   return (
+
     <Routes>
 
       {/* PUBLIC ROUTES */}
-      <Route path="/login" element={<Login/>} />
 
-      <Route path="/signup" element={<Signup/>} />
+      <Route
+        path="/login"
+        element={<Login />}
+      />
 
+      <Route
+        path="/signup"
+        element={<Signup />}
+      />
 
       {/* PROTECTED ROUTES */}
+
       <Route
         path="/"
         element={
           <ProtectedRoute>
             <Dashboard />
-         </ProtectedRoute>
+          </ProtectedRoute>
         }
       />
+
+      {/* ALL PROJECTS */}
+
       <Route
         path="/projects"
         element={
           <ProtectedRoute>
-            <AllProjects/>
-         </ProtectedRoute>
+            <AllProjects />
+          </ProtectedRoute>
         }
       />
 
+      {/* SINGLE PROJECT */}
 
-
-
-    {/* /projects/:id */}
       <Route
         path="/projects/:id"
         element={
           <ProtectedRoute>
             <ProjectDetails />
-         </ProtectedRoute>
+          </ProtectedRoute>
+        }
+      />
+
+      {/* ALL TASKS */}
+
+      <Route
+        path="/tasks"
+        element={
+          <ProtectedRoute>
+            <AllTasks />
+          </ProtectedRoute>
         }
       />
 

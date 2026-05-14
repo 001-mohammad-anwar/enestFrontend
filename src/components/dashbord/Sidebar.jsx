@@ -80,10 +80,10 @@ const Sidebar = () => {
               Projects
             </Link>
 
-            <button className="flex items-center gap-3 w-full text-gray-600 hover:bg-gray-100 px-4 py-3 rounded-2xl transition">
+            <Link to="/tasks" className="flex items-center gap-3 w-full text-gray-600 hover:bg-gray-100 px-4 py-3 rounded-2xl transition">
               <ListTodo size={20} />
               Tasks
-            </button>
+            </Link>
 
             <button className="flex items-center gap-3 w-full text-gray-600 hover:bg-gray-100 px-4 py-3 rounded-2xl transition">
               <Settings size={20} />
